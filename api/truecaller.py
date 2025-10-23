@@ -49,6 +49,4 @@ def truecaller_api():
     result = fetch_truecaller(number)
     return jsonify(result)
 
-# Vercel entrypoint (important!)
-def handler(event, context):
-    return app(event, context)
+# ❌ No app.run(), no handler — Vercel will detect and serve "app"
